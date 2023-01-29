@@ -10,6 +10,8 @@ import java.util.Optional;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+import com.shimul.quarkus.ers.provider.ecb.cache.ExchangeRateDataCache;
+
 @ApplicationScoped
 public class ExchangeRateProviderService {
 	

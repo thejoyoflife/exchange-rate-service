@@ -47,10 +47,11 @@ You can then execute your native executable with: `./target/exchange-rate-servic
 
 If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.
 
-## Provided Code
+#### Improvements to be done
 
-### RESTEasy Reactive
-
-Easily start your Reactive RESTful Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
+* Server in memory cache can be replaced with Redis both for the currency exchange rates and the hit count.
+* The hit count numbers can be exposed as a micrometer metric to be ingested by a Prometheus/Grafana backend. 
+* Maybe some resillience patterns like Retry/Timeout/Fallback/CircuitBreaker can be implemented in the dependent service invocation layer. 
+* Error logging and handling can be improved a bit.
+* More tests can be introduced, and a test coverage report can be generated automatically during the build process.
+* CI/CD pipeline (Github Actions) can be implemented to build and deploy the module automatically into a Kubernetes cluster.

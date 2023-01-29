@@ -1,4 +1,4 @@
-package com.shimul.quarkus.ers.provider.ecb;
+package com.shimul.quarkus.ers.provider.ecb.cache;
 
 import static com.shimul.quarkus.ers.provider.ecb.ProviderUtils.BASE_CURRENCY;
 
@@ -16,12 +16,14 @@ import javax.inject.Inject;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 import org.jboss.logging.Logger;
 
+import com.shimul.quarkus.ers.provider.ecb.remote.RemoteWebServiceInterface;
+import com.shimul.quarkus.ers.provider.ecb.xml.ExchangeRateXMLDataParser;
+
 @ApplicationScoped
 public class ExchangeRateDataCache {
 	
 	private static final Logger LOGGER = Logger.getLogger(ExchangeRateDataCache.class);
 	
-	@Inject
 	@RestClient
 	RemoteWebServiceInterface ecb;
 	

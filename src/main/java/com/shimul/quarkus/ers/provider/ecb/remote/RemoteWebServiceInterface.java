@@ -1,4 +1,4 @@
-package com.shimul.quarkus.ers.provider.ecb;
+package com.shimul.quarkus.ers.provider.ecb.remote;
 
 import java.lang.reflect.Method;
 
@@ -17,7 +17,7 @@ public interface RemoteWebServiceInterface {
 	@GET
 	String getExchangeRateXml();
 	
-	// TODO: dummy exception handling
+	// TODO: dummy exception handling (for 400, 500 codes)
 	@ClientExceptionMapper
 	static RuntimeException toException(Response resp, Method method) {
 		String loc = method.toString();

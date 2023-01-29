@@ -1,4 +1,4 @@
-package com.shimul.quarkus.ers.provider.ecb;
+package com.shimul.quarkus.ers.provider.ecb.xml;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

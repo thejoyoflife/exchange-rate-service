@@ -72,4 +72,14 @@ public class ExchangeRateResourceTest {
     				.body("ConvertedAmount", is(USD_TO_EUR_CONVERTED_AMT));
     		
     }
+    
+    @Test
+    @DisplayName("Returns hit count of a supported currency successfully")
+    void testCurrenciesEndpointHitCount() {
+    	given()
+			.when().get("/currencies")
+				.then()
+					.statusCode(200)					
+					.body(USD_CURRENCY_CODE, is(2));
+    }
 }

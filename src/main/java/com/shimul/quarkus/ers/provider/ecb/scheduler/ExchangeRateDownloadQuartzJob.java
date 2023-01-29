@@ -1,4 +1,4 @@
-package com.shimul.quarkus.ers.provider.ecb;
+package com.shimul.quarkus.ers.provider.ecb.scheduler;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -7,6 +7,8 @@ import org.jboss.logging.Logger;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
+
+import com.shimul.quarkus.ers.provider.ecb.cache.ExchangeRateDataCache;
 
 @ApplicationScoped
 public class ExchangeRateDownloadQuartzJob implements Job {

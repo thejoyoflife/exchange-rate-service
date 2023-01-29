@@ -1,4 +1,4 @@
-package com.shimul.quarkus.ers.provider.ecb;
+package com.shimul.quarkus.ers.provider.ecb.scheduler;
 
 import static com.shimul.quarkus.ers.provider.ecb.ProviderUtils.QUARTZ_CRON_EXP_DOWNLOAD_SCHEDULE;
 import static com.shimul.quarkus.ers.provider.ecb.ProviderUtils.ZONE_ID;
@@ -18,6 +18,8 @@ import org.quartz.JobDetail;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
 import org.quartz.TriggerBuilder;
+
+import com.shimul.quarkus.ers.provider.ecb.cache.ExchangeRateDataCache;
 
 import io.quarkus.runtime.StartupEvent;
 

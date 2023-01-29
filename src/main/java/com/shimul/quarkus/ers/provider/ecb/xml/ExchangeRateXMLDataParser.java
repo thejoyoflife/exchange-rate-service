@@ -1,4 +1,4 @@
-package com.shimul.quarkus.ers.provider.ecb;
+package com.shimul.quarkus.ers.provider.ecb.xml;
 
 import static com.shimul.quarkus.ers.provider.ecb.ProviderUtils.CUBE_XML_ELEM;
 import static com.shimul.quarkus.ers.provider.ecb.ProviderUtils.CURRENCY_XML_ATTR;
