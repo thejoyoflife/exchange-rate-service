@@ -33,7 +33,7 @@ public class ExchangeRateDataCache {
 	// currency rates against a base currency
 	private final Map<String, BigDecimal> currRates = new ConcurrentHashMap<>();
 	
-	private LocalDate asonDate;
+	private volatile LocalDate asonDate;
 	
 	public Optional<BigDecimal> getRateAgnstBaseCurr(String curr) {
 		// An attempt to show most up-to-date data to the users
@@ -82,8 +82,8 @@ public class ExchangeRateDataCache {
 	}
 	
 	private void clear() {
-		currRates.clear();
 		asonDate = null;
+		currRates.clear();		
 	}
 
 	private boolean isInvalid() {
